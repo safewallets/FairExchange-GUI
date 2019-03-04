@@ -7,7 +7,7 @@ const ExchangesTOSModalRender = function() {
     <div onKeyDown={ (event) => this.handleKeydown(event) }>
       <div
         className={ `modal modal-3d-sign exchanges-tos-modal ${this.state.className}` }
-        id="kmd_txid_info_mdl">
+        id="safe_txid_info_mdl">
         <div
           onClick={ this.close }
           className="modal-close-overlay"></div>
@@ -28,8 +28,8 @@ const ExchangesTOSModalRender = function() {
               </h4>
             </div>
             <div className="modal-body modal-body-container">
-              <p>If you continue you agee to use a 3rd party service Coinswitch.co. All your actions with the use of Coinswitch.co API are outside of Komodo Platform control and are subject to Coinswitch.co <a onClick={ this.openCoinswitchTOS } className="pointer">terms of service</a>. Komodo Platform will not disclose any private information to Coinswitch.co. All details that you may provide to Coinswitch.co will be subject to Coinswitch.co <a onClick={ this.openCoinswitchTOS } className="pointer">terms for service</a>.</p>
-              <p>KOMODO PLATFORM ACCEPTS NO RESPONSIBILITY AND WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE WHATSOEVER SUFFERED AS A RESULT OF ACCESSING, USE OF, OR RELIANCE UPON COINSWITCH.CO INFORMATION AND SERVICES.</p>
+              <p>If you continue you agee to use a 3rd party service Coinswitch.co. All your actions with the use of Coinswitch.co API are outside of Safecoin Platform control and are subject to Coinswitch.co <a onClick={ this.openCoinswitchTOS } className="pointer">terms of service</a>. Safecoin Platform will not disclose any private information to Coinswitch.co. All details that you may provide to Coinswitch.co will be subject to Coinswitch.co <a onClick={ this.openCoinswitchTOS } className="pointer">terms for service</a>.</p>
+              <p>SAFECOIN PLATFORM ACCEPTS NO RESPONSIBILITY AND WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE WHATSOEVER SUFFERED AS A RESULT OF ACCESSING, USE OF, OR RELIANCE UPON COINSWITCH.CO INFORMATION AND SERVICES.</p>
             </div>
           </div>
         </div>

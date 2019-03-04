@@ -2,7 +2,7 @@ import { triggerToaster } from '../actionCreators';
 import { DICE_LIST } from '../storeType';
 import Config, {
   token,
-  agamaPort,
+  safewalletPort,
   rpc2cli,
 } from '../../config';
 import Store from '../../store';
@@ -38,7 +38,7 @@ export const diceProcessErrors = (json) => {
 export const getDiceList = (coin) => {
   return dispatch => {
     return fetch(
-      `http://127.0.0.1:${agamaPort}/api/native/dice/list`,
+      `http://127.0.0.1:${safewalletPort}/api/native/dice/list`,
       fetchType.get
     )
     .catch((error) => {
@@ -70,7 +70,7 @@ export const getDiceList = (coin) => {
     };
 
     return fetch(
-      `http://127.0.0.1:${agamaPort}/api/cli`,
+      `http://127.0.0.1:${safewalletPort}/api/cli`,
       fetchType(JSON.stringify({ payload })).post
     )
     .catch((error) => {

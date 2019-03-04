@@ -15,14 +15,14 @@ import Store from '../../../store';
 import mainWindow, { staticVar } from '../../../util/mainWindow';
 import ReactTooltip from 'react-tooltip';
 import Config from '../../../config';
-import { stringToWif } from 'agama-wallet-lib/src/keys';
-import electrumJSNetworks from 'agama-wallet-lib/build/bitcoinjs-networks';
-import { isKomodoCoin } from 'agama-wallet-lib/build/coin-helpers';
+import { stringToWif } from 'safewallet-wallet-lib/src/keys';
+import electrumJSNetworks from 'safewallet-wallet-lib/build/bitcoinjs-networks';
+import { isSafecoinCoin } from 'safewallet-wallet-lib/build/coin-helpers';
 import {
   fromSats,
   toSats,
-} from 'agama-wallet-lib/src/utils';
-import { explorerList } from 'agama-wallet-lib/src/coin-helpers';
+} from 'safewallet-wallet-lib/src/utils';
+import { explorerList } from 'safewallet-wallet-lib/src/coin-helpers';
 
 const { shell } = window.require('electron');
 const SPV_MAX_LOCAL_TIMESTAMP_DEVIATION = 300; // 5 min
@@ -83,7 +83,7 @@ class SweepKeysPanel extends React.Component {
     if (Number(_balance) - fromSats(_fees[this.props.ActiveCoin.coin]) >= 0) {
       const _kp = stringToWif(
         this.state.wifkeysPassphrase,
-        electrumJSNetworks[isKomodoCoin(_coin.toLowerCase()) ? 'kmd' : _coin.toLowerCase()],
+        electrumJSNetworks[isSafecoinCoin(_coin.toLowerCase()) ? 'safe' : _coin.toLowerCase()],
         true
       );
       const _pub = this.props.Dashboard.electrumCoins[_coin].pub;
@@ -147,7 +147,7 @@ class SweepKeysPanel extends React.Component {
     
     const _kp = stringToWif(
       this.state.wifkeysPassphrase,
-      electrumJSNetworks[isKomodoCoin(_coinlc) ? 'kmd' : _coinlc],
+      electrumJSNetworks[isSafecoinCoin(_coinlc) ? 'safe' : _coinlc],
       true
     );
 
@@ -248,7 +248,7 @@ class SweepKeysPanel extends React.Component {
         [propName]: e.value,
       });
 
-      if (e.value.split('|')[0] === 'KMD') {
+      if (e.value.split('|')[0] === 'SAFE') {
         apiGetRemoteTimestamp()
         .then((res) => {
           if (res.msg === 'success') {
@@ -310,7 +310,7 @@ class SweepKeysPanel extends React.Component {
             <div className="form-group form-material floating padding-bottom-40">
               <label
                 className="control-label col-sm-1 no-padding-left padding-top-10"
-                htmlFor="kmdWalletSendTo">
+                htmlFor="safeWalletSendTo">
                 { translate('TOOLS.COIN') }
               </label>
               <Select

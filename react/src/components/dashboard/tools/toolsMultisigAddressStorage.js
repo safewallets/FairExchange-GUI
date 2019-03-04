@@ -17,7 +17,7 @@ import {
 } from '../../../actions/actionCreators';
 import Store from '../../../store';
 import ReactTooltip from 'react-tooltip';
-import { multisig } from 'agama-wallet-lib/src/keys';
+import { multisig } from 'safewallet-wallet-lib/src/keys';
 import mainWindow, { staticVar } from '../../../util/mainWindow';
 
 class ToolsMultisigAddressStorage extends React.Component {
@@ -182,7 +182,7 @@ class ToolsMultisigAddressStorage extends React.Component {
         <div className="col-sm-12 form-group form-material no-padding-left">
           <label
             className="control-label col-sm-2 no-padding-left"
-            htmlFor="kmdWalletSendTo">
+            htmlFor="safeWalletSendTo">
             Multisig data
           </label>
           <textarea
@@ -191,13 +191,13 @@ class ToolsMultisigAddressStorage extends React.Component {
             className="col-sm-7"
             onChange={ this.updateInput }
             name="msigData"
-            placeholder="Provide Agama generated multi signature data here"
+            placeholder="Provide Safewallet generated multi signature data here"
             value={ this.state.msigData }></textarea>
         </div>
         <div className="col-sm-12 form-group form-material no-padding-left">
           <label
             className="control-label col-sm-2 no-padding-left"
-            htmlFor="kmdWalletSendTo">
+            htmlFor="safeWalletSendTo">
             Seed / WIF (optional)
           </label>
           <input
@@ -206,7 +206,7 @@ class ToolsMultisigAddressStorage extends React.Component {
             name="seed"
             onChange={ this.updateInput }
             value={ this.state.seed }
-            id="kmdWalletSendTo"
+            id="safeWalletSendTo"
             placeholder={ translate('TOOLS.ENTER_A_SEED') + ' or WIF' }
             autoComplete="off"
             required />

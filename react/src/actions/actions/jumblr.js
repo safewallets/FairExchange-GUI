@@ -1,10 +1,10 @@
 import {
   triggerToaster,
-  getNewKMDAddresses,
+  getNewSAFEAddresses,
 } from '../actionCreators';
 import Config, {
   token,
-  agamaPort,
+  safewalletPort,
   rpc2cli,
 } from '../../config';
 import Store from '../../store';
@@ -22,14 +22,14 @@ const getNewAddress = (coin) => {
     };
 
     fetch(
-      `http://127.0.0.1:${agamaPort}/api/cli`,
+      `http://127.0.0.1:${safewalletPort}/api/cli`,
       fetchType(JSON.stringify({ payload })).post
     )
     .catch((error) => {
       console.log(error);
       Store.dispatch(
         triggerToaster(
-          translate('API.getNewAddress') + ' (code: genJumblrAddress + getKMDAddressesNative)',
+          translate('API.getNewAddress') + ' (code: genJumblrAddress + getSAFEAddressesNative)',
           translate('TOASTR.ERROR'),
           'error'
         )
@@ -54,7 +54,7 @@ export const setJumblrAddress = (coin, type, address) => {
     };
 
     fetch(
-      `http://127.0.0.1:${agamaPort}/api/cli`,
+      `http://127.0.0.1:${safewalletPort}/api/cli`,
       fetchType(JSON.stringify({ payload })).post
     )
     .catch((error) => {
@@ -86,7 +86,7 @@ export const pauseJumblr = (coin) => {
     };
 
     fetch(
-      `http://127.0.0.1:${agamaPort}/api/cli`,
+      `http://127.0.0.1:${safewalletPort}/api/cli`,
       fetchType(JSON.stringify({ payload })).post
     )
     .catch((error) => {
@@ -118,7 +118,7 @@ export const resumeJumblr = (coin) => {
     };
 
     fetch(
-      `http://127.0.0.1:${agamaPort}/api/cli`,
+      `http://127.0.0.1:${safewalletPort}/api/cli`,
       fetchType(JSON.stringify({ payload })).post
     )
     .catch((error) => {
@@ -150,7 +150,7 @@ const dumpPrivkey = (coin, key) => {
     };
 
     fetch(
-      `http://127.0.0.1:${agamaPort}/api/cli`,
+      `http://127.0.0.1:${safewalletPort}/api/cli`,
       fetchType(JSON.stringify({ payload })).post
     )
     .catch((error) => {
@@ -189,7 +189,7 @@ export const importPrivkey = (coin, key, rescan = false, isZKey) => {
     };
 
     fetch(
-      `http://127.0.0.1:${agamaPort}/api/cli`,
+      `http://127.0.0.1:${safewalletPort}/api/cli`,
       fetchType(JSON.stringify({ payload })).post
     )
     .catch((error) => {

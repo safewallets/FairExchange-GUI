@@ -109,7 +109,7 @@ class InvoiceModal extends React.Component {
 
         if (type === 'private' ||
             (type === 'public' &&
-            (_coin === 'KMD' ||
+            (_coin === 'SAFE' ||
              (staticVar.chainParams &&
               staticVar.chainParams[_coin] &&
               !staticVar.chainParams[_coin].ac_private)))) {

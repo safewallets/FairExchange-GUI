@@ -17,7 +17,7 @@ import {
 import Store from '../../../store';
 import QRCode from 'qrcode.react';
 import QRModal from '../qrModal/qrModal';
-import { explorerList } from 'agama-wallet-lib/src/coin-helpers';
+import { explorerList } from 'safewallet-wallet-lib/src/coin-helpers';
 const { shell } = window.require('electron');
 
 class ToolsTxPush extends React.Component {
@@ -94,7 +94,7 @@ class ToolsTxPush extends React.Component {
         <div className="col-xlg-12 form-group form-material no-padding-left padding-top-20 padding-bottom-50">
           <label
             className="control-label col-sm-1 no-padding-left"
-            htmlFor="kmdWalletSendTo">
+            htmlFor="safeWalletSendTo">
             { translate('TOOLS.COIN') }
           </label>
           <Select

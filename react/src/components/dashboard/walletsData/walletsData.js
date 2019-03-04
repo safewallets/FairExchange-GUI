@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import translate from '../../../translate/translate';
-import { formatValue } from 'agama-wallet-lib/src/utils';
+import { formatValue } from 'safewallet-wallet-lib/src/utils';
 import Config from '../../../config';
 import {
   toggleDashboardTxInfoModal,
@@ -32,14 +32,14 @@ import {
   AddressListRender,
   WalletsDataRender,
 } from  './walletsData.render';
-import { secondsToString } from 'agama-wallet-lib/src/time';
-import { getRandomElectrumServer } from 'agama-wallet-lib/src/utils';
+import { secondsToString } from 'safewallet-wallet-lib/src/time';
+import { getRandomElectrumServer } from 'safewallet-wallet-lib/src/utils';
 import DoubleScrollbar from 'react-double-scrollbar';
 import mainWindow, { staticVar } from '../../../util/mainWindow';
 
 /*import io from 'socket.io-client';
 
-const socket = io.connect(`http://127.0.0.1:${Config.agamaPort}`);*/
+const socket = io.connect(`http://127.0.0.1:${Config.safewalletPort}`);*/
 
 const BOTTOM_BAR_DISPLAY_THRESHOLD = 15;
 
@@ -213,7 +213,7 @@ class WalletsData extends React.Component {
     const _balance = this.props.ActiveCoin.balance;
 
     if (this.props.ActiveCoin &&
-        this.props.ActiveCoin.coin === 'KMD' &&
+        this.props.ActiveCoin.coin === 'SAFE' &&
         _balance) {
       if (_balance.interest &&
           _balance.interest > 0) {
@@ -440,7 +440,7 @@ class WalletsData extends React.Component {
         _srcElement &&
         _srcElement.className !== 'btn dropdown-toggle btn-info' &&
         (_srcElement.offsetParent && _srcElement.offsetParent.className !== 'btn dropdown-toggle btn-info') &&
-        (e.path && e.path[4] && e.path[4].className.indexOf('showkmdwalletaddrs') === -1) &&
+        (e.path && e.path[4] && e.path[4].className.indexOf('showsafewalletaddrs') === -1) &&
         (_srcElement.offsetParent && _srcElement.offsetParent.className.indexOf('dropdown') === -1) &&
         _srcElement.className !== 'dropdown-toggle btn-xs btn-default') {
       this.setState({
@@ -690,14 +690,14 @@ class WalletsData extends React.Component {
       this.state.itemsList &&
       this.state.itemsList.length
     ) {
-      const _isAcPrivate = _coin !== 'KMD' && staticVar.chainParams && staticVar.chainParams[_coin] && !staticVar.chainParams[_coin].ac_private;
+      const _isAcPrivate = _coin !== 'SAFE' && staticVar.chainParams && staticVar.chainParams[_coin] && !staticVar.chainParams[_coin].ac_private;
       
       return (
         <DoubleScrollbar>
           { TxHistoryListRender.call(this) }
           { !this.state.kvView &&
             (this.props.ActiveCoin.mode === 'spv' ||
-             (this.props.ActiveCoin.mode === 'native' && (_coin === 'KMD' || _isAcPrivate))) &&
+             (this.props.ActiveCoin.mode === 'native' && (_coin === 'SAFE' || _isAcPrivate))) &&
             <div className="margin-left-5 margin-top-30">
               <span
                 className="pointer"

@@ -11,10 +11,10 @@ import {
 import Store from '../../../store';
 import devlog from '../../../util/devlog';
 import {
-  isKomodoCoin,
+  isSafecoinCoin,
   explorerList,
-} from 'agama-wallet-lib/src/coin-helpers';
-import { toSats } from 'agama-wallet-lib/src/utils';
+} from 'safewallet-wallet-lib/src/coin-helpers';
+import { toSats } from 'safewallet-wallet-lib/src/utils';
 
 const { shell } = window.require('electron');
 
@@ -70,7 +70,7 @@ class ToolsMergeUTXO extends React.Component {
 
     const payload = {
       wif,
-      network: 'komodo',
+      network: 'safecoin',
       targets: [Math.floor(toSats(totalOutSize)) - 10000 + _interest],
       utxo: _utxos,
       changeAddress: address,
@@ -134,7 +134,7 @@ class ToolsMergeUTXO extends React.Component {
 
     apiToolsSeedToWif(
       this.state.utxoMergeSeed,
-      'KMD',
+      'SAFE',
       true
     )
     .then((seed2kpRes) => {
@@ -284,7 +284,7 @@ class ToolsMergeUTXO extends React.Component {
         <div className="col-xlg-12 form-group form-material no-padding-left padding-top-20 padding-bottom-50">
           <label
             className="control-label col-sm-1 no-padding-left"
-            htmlFor="kmdWalletSendTo">
+            htmlFor="safeWalletSendTo">
             { translate('TOOLS.COIN') }
           </label>
           <Select
@@ -296,9 +296,9 @@ class ToolsMergeUTXO extends React.Component {
             valueRenderer={ this.renderCoinOption }
             options={
               [{
-                label: 'Komodo (KMD)',
-                icon: 'btc/KMD',
-                value: 'KMD|native',
+                label: 'Safecoin (SAFE)',
+                icon: 'btc/SAFE',
+                value: 'SAFE|native',
               }]
               .concat(addCoinOptionsAC('skip'))
             } />
@@ -306,7 +306,7 @@ class ToolsMergeUTXO extends React.Component {
         <div className="col-sm-12 form-group form-material no-padding-left">
           <label
             className="control-label col-sm-1 no-padding-left"
-            htmlFor="kmdWalletSendTo">
+            htmlFor="safeWalletSendTo">
             { translate('TOOLS.SEED') }
           </label>
           <input
@@ -366,7 +366,7 @@ class ToolsMergeUTXO extends React.Component {
         <div className="col-sm-12 form-group form-material no-padding-left padding-top-20 padding-bottom-20">
           <label
             className="control-label col-sm-2 no-padding-left"
-            htmlFor="kmdWalletSendTo">
+            htmlFor="safeWalletSendTo">
             { translate('TOOLS.UTXO_COUNT_TO_MERGE') }
           </label>
           <input
@@ -395,7 +395,7 @@ class ToolsMergeUTXO extends React.Component {
         { this.state.utxoMergePushResult &&
           <div className="col-sm-12 form-group form-material no-padding-left margin-top-10">
             TXID: <div className="blur selectable word-break--all">{ this.state.utxoMergePushResult }</div>
-            { isKomodoCoin(this.state.utxoMergeCoin.split('|')[0]) &&
+            { isSafecoinCoin(this.state.utxoMergeCoin.split('|')[0]) &&
               <div className="margin-top-10">
                 <button
                   type="button"

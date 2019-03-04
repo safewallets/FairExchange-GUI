@@ -63,7 +63,7 @@ class ToolsGetUtxos extends React.Component {
             <td>{ _utxos[i].amount }</td>
             <td>{ _utxos[i].confirmations }</td>
             <td>{ _utxos[i].vout }</td>
-            { _coin[0] === 'KMD' &&
+            { _coin[0] === 'SAFE' &&
               <td>{ _utxos[i].locktime }</td>
             }
             <td className="blur selectable">{ _utxos[i].txid }</td>
@@ -81,7 +81,7 @@ class ToolsGetUtxos extends React.Component {
               <th>{ translate('TOOLS.AMOUNT') }</th>
               <th>{ translate('TOOLS.CONFS') }</th>
               <th>{ translate('TOOLS.VOUT') }</th>
-              { _coin[0] === 'KMD' &&
+              { _coin[0] === 'SAFE' &&
                 <th>Locktime</th>
               }
               <th>TxID</th>
@@ -95,7 +95,7 @@ class ToolsGetUtxos extends React.Component {
               <th>{ translate('TOOLS.AMOUNT') }</th>
               <th>{ translate('TOOLS.CONFS') }</th>
               <th>{ translate('TOOLS.VOUT') }</th>
-              { _coin[0] === 'KMD' &&
+              { _coin[0] === 'SAFE' &&
                 <th>Locktime</th>
               }
               <th>TxID</th>
@@ -148,7 +148,7 @@ class ToolsGetUtxos extends React.Component {
         <div className="col-xlg-12 form-group form-material no-padding-left padding-top-20 padding-bottom-70">
           <label
             className="control-label col-sm-1 no-padding-left"
-            htmlFor="kmdWalletSendTo">
+            htmlFor="safeWalletSendTo">
             { translate('TOOLS.COIN') }
           </label>
           <Select
@@ -166,7 +166,7 @@ class ToolsGetUtxos extends React.Component {
         <div className="col-sm-12 form-group form-material no-padding-left">
           <label
             className="control-label col-sm-1 no-padding-left"
-            htmlFor="kmdWalletSendTo">{ translate('TOOLS.ADDR') }</label>
+            htmlFor="safeWalletSendTo">{ translate('TOOLS.ADDR') }</label>
           <input
             type="text"
             className="form-control col-sm-3 blur"

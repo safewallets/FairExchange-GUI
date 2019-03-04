@@ -34,7 +34,7 @@ const LANG_EN = {
     PASSPHRASE: 'Seed',
     NOTICE: 'Notice',
     NOTICE_DESC: 'importing a seed will trigger a full wallet rescan',
-    KMD_RESCAN_WARNING_TIME: 'This process can take hours to rescan the whole blockchain',
+    SAFE_RESCAN_WARNING_TIME: 'This process can take hours to rescan the whole blockchain',
     SHOW_ADDRESS_AND_WIF: 'Show address and WIF',
     ADDRESS: 'Address',
     OR: 'or',
@@ -62,9 +62,9 @@ const LANG_EN = {
     NO_DATA: 'No data',
     TIP: 'Tip',
     NOTICE: 'Notice',
-    TIP_DESC: 'don\'t attempt to claim rewards smaller than 0.01 KMD. ' +
+    TIP_DESC: 'don\'t attempt to claim rewards smaller than 0.01 SAFE. ' +
               'A fee you have to pay for transaction will be more or equal to the rewards amount.',
-    NATIVE_INTEREST_CHANGE_DESC: 'It\'s likely that reward is going to be credited as a separate transaction to a newely created KMD address. ' +
+    NATIVE_INTEREST_CHANGE_DESC: 'It\'s likely that reward is going to be credited as a separate transaction to a newely created SAFE address. ' +
                                  'This is how native implements rewards claiming.',
     LOCKTIME_IS_SET_TO: 'Locktime is set to',
     LOCKTIME_IS_UNSET: 'Locktime is unset! Your UTXO is not accruing rewards.',
@@ -72,22 +72,22 @@ const LANG_EN = {
     SEND_MY_BALANCE_TO: 'Send my balance to',
   },
   ABOUT: {
-    AGAMA_WALLET: 'Agama Wallet',
-    ABOUT_AGAMA: 'About Agama',
-    AGAMA_MODES: 'Agama Wallet is a desktop app that you can use to manage multiple cryptocurrency wallets. ' +
+    SAFEWALLET_WALLET: 'Safewallet Wallet',
+    ABOUT_SAFEWALLET: 'About Safewallet',
+    SAFEWALLET_MODES: 'Safewallet Wallet is a desktop app that you can use to manage multiple cryptocurrency wallets. ' +
                  'When you set up a wallet, you can configure it to operate in one of the following modes:',
     NATIVE_MODE_DESC: 'Only available for a few currencies. Like \'Full Mode\' but provides advanced functionality.',
-    AGAMA_CAPABILITIES: 'Agama includes the following capabilities:',
+    SAFEWALLET_CAPABILITIES: 'Safewallet includes the following capabilities:',
     BARTER_DEX_DESC: 'Easily exchange cryptocurrencies via a shapeshift-like service.',
-    AGAMA_NOTE: 'Note: Agama Wallet is still in development. ' +
+    SAFEWALLET_NOTE: 'Note: Safewallet Wallet is still in development. ' +
                 'It is safe to use, but you should make proper backups. ' +
                 'We do not recommend using it as the primarily wallet for your cryptocurrencies.',
     TESTERS: 'Testers',
-    TESTERS_P1: 'You can help us test Agama. Just',
+    TESTERS_P1: 'You can help us test Safewallet. Just',
     TESTERS_P2: 'download and install the latest release',
     TESTERS_P3: 'Then, report any bugs you encounter to our developers on the',
     TESTERS_P4: 'Your help is greatly appreciated!',
-    AGAMA_DAPPS: 'Agama also supports the following desktop apps:',
+    SAFEWALLET_DAPPS: 'Safewallet also supports the following desktop apps:',
     JUMBLR_DESC: 'A decentralized Bitcoin blockchain tumbler for privacy and lower fees.',
     BARTER_DEX_DESC_ALT: 'A decentralized coin exchange.',
     CHANNEL: 'channel',
@@ -99,7 +99,7 @@ const LANG_EN = {
     TX_TOO_LARGE: 'Transaction too large',
     DAEMON_IS_STILL_RUNNING: 'daemon is still running. If you want to completely stop it and remove use stop icon next time.',
     CONN_ERROR: 'Connection error',
-    KMD_PASSIVE_ERROR: 'Please make sure to run komodod manually',
+    SAFE_PASSIVE_ERROR: 'Please make sure to run safecoind manually',
     ERROR_SM: 'error',
     ADDRESS_ALREADY_REG: 'Address already registered',
     COULDNT_COPY_ADDRESS: 'Couldn\'t copy address to clipboard',
@@ -240,7 +240,7 @@ const LANG_EN = {
                            'The amount you are seeing now might be not precise.',
     PASSPHRASE_SUCCESSFULLY_ENCRYPTED: 'Seed is encrypted. Please try to login with your password now.',
     PASSPHRASE_SUCCESSFULLY_CHANGED_PIN: 'Seed PIN (@template@.pin) is changed.',
-    WALLET_OFFLINE: 'Agama is currently unable to connect to the Internet.',
+    WALLET_OFFLINE: 'Safewallet is currently unable to connect to the Internet.',
     OFFLINE: 'Offline',
     TOGGLE_COIN_CONTEXT_MENU: 'Toggle coin context menu',
     TOP_MENU: 'Top menu',
@@ -326,7 +326,7 @@ const LANG_EN = {
     NEXT: 'Next',
     ENTRIES_SM: 'entries',
     SYNC_ERR_BLOCKS: 'Connecting to peers...',
-    SELECT_A_COIN: 'Select Coin to add to Agama Wallet',
+    SELECT_A_COIN: 'Select Coin to add to Safewallet Wallet',
     WALLETS: 'Wallets',
     ACTIVATE_COIN: 'Activate Coin',
     WELCOME_PLEASE_ADD: 'Welcome. Please add a coin to start.',
@@ -334,7 +334,7 @@ const LANG_EN = {
     SELECT: '-Select-',
     SELECT_PIN_NAME: 'Select pin name',
     NATIVE_MODE: 'Native Mode',
-    NATIVE_MODE_DESC1: 'This mode is ONLY available for KOMODO and Assetchains. ' +
+    NATIVE_MODE_DESC1: 'This mode is ONLY available for SAFECOIN and Assetchains. ' +
                         'This mode uses',
     NATIVE_MODE_DESC2: 'to query blockchain data.',
     NATIVE_MODE_DESC3: 'is the only mode which allows you to make',
@@ -359,7 +359,7 @@ const LANG_EN = {
     LOGOUT: 'Logout',
     DASHBOARD: 'Dashboard',
     WALLET_SETTINGS: 'Wallet Settings',
-    KMD_WALLET: 'Komodo Wallet',
+    SAFE_WALLET: 'Safecoin Wallet',
     ZC_WALLET: 'Zcash Wallet',
     ACTIVE_COINS: 'Active Coins',
     TRANSACTIONS: 'Transactions',
@@ -414,7 +414,7 @@ const LANG_EN = {
     TYPE: 'Type',
     INTEREST: 'Rewards',
     ACTIVATING_CHAIN: 'Activating best chain',
-    KMD_STARTED: 'Komodo daemon has been started and is processing.<br>' +
+    SAFE_STARTED: 'Safecoin daemon has been started and is processing.<br>' +
                  'Please wait while the best chain is being activated.<br>' +
                  'Tip: in case sync is stuck restart the wallet.',
     CONNECTIONS: 'Connections',
@@ -456,7 +456,7 @@ const LANG_EN = {
     PASSPHRASE: 'Seed',
     GET_WIF_KEYS: 'Get Private Keys',
     IMPORT_KEYS: 'Import Keys',
-    IMPORT_KEYS_DESC_P1: 'This section allows you to import KMD/Assetchain private key of all iguana supported coins.',
+    IMPORT_KEYS_DESC_P1: 'This section allows you to import SAFE/Assetchain private key of all iguana supported coins.',
     IMPORT_KEYS_DESC_P2: 'It is not mandatory to have that coin active in the wallet for which you are executing import private key process.',
     IMPORT_KEYS_DESC_P3: 'You\'ll also notice the private key you imported for one coin or chain will also be showing a new address in all other coin wallets\' receiving address section. ' +
                            'It is normal.',
@@ -571,8 +571,8 @@ const LANG_EN = {
     NOTICE: 'EXPERIMENTAL TEST VERSION ONLY',
     DESCRIPTION: 'Jumblr feature is very experimental and for now, is Only enabled for testing and debugging. ' +
                  'Please use the current version of Jumblr only with small amounts if you are participating in testing this feature.',
-    NEED_NATIVE: 'Need Native Mode Komodo',
-    TO_USE_JUMBLR: 'To use Jumblr feature, you need to activate Komodo in Native Mode.',
+    NEED_NATIVE: 'Need Native Mode Safecoin',
+    TO_USE_JUMBLR: 'To use Jumblr feature, you need to activate Safecoin in Native Mode.',
     THIS_SCREEN_DOESNT_REFRESH: 'This screen does not auto refresh. ' +
                                   'You will need to hit the Refresh button on the top right corner of the screen to get latest Jumblr data.',
     FEW_SECURITY_NOTES: 'Few Security Notes for your Privacy and Anonymity of funds',
@@ -591,27 +591,27 @@ const LANG_EN = {
     LOGIN_WITH_JUMBLR: 'You\'ll login with your Jumblr seed to access funds and will be able to use it just like any other wallet address.',
     AGAIN_DONT_SHARE: 'Again, DO NOT SHARE YOUR JUMBLR ADDRESS WITH ANYONE.',
     USING_JUMBLR: 'Using Jumblr',
-    RUN_KMD: 'Run Komodo in Native Mode',
-    LOGIN_KMD: 'Login with your seed',
+    RUN_SAFE: 'Run Safecoin in Native Mode',
+    LOGIN_SAFE: 'Login with your seed',
     GO_TO: 'Go to Jumblr Menu',
-    FIND_DEPOSIT_ADDR: 'There find your Deposit Address for coin you want to anonymise your funds. (For a start only KMD is supported. BTC support will come in later versions)',
+    FIND_DEPOSIT_ADDR: 'There find your Deposit Address for coin you want to anonymise your funds. (For a start only SAFE is supported. BTC support will come in later versions)',
     YOU_SEND_FUNDS: 'You send your funds to deposit address.',
     KEEP_WALLET_OPEN: 'Keep your wallet open',
-    IMPORTANT_FUNDS: '[IMPORTANT] Funds are processed in lot sizes 10 KMD, 100 KMD, 1000 KMD, and 10,000 KMD.',
+    IMPORTANT_FUNDS: '[IMPORTANT] Funds are processed in lot sizes 10 SAFE, 100 SAFE, 1000 SAFE, and 10,000 SAFE.',
     LARGE_LOT: 'The large lot sizes will process first, and then smaller.',
-    EG: 'For example, you sent 1393 KMD to KMD Deposit Address.<br>' +
-        'First it will process 1000 KMD<br>' +
-        'then 100 KMD<br>' +
-        'then 100 KMD<br>' +
-        'then 100 KMD',
-    '93_KMD': '93 KMD will keep waiting in deposit address.',
-    TO_CLEAR_THEM: 'To clear them you\'ll have to send 7 KMD more to your KMD Deposit Address.',
-    WHEN_IT_TOTALS: 'When it totals to 10/100/1000 KMD, it will process to your KMD Jumblr Address.',
+    EG: 'For example, you sent 1393 SAFE to SAFE Deposit Address.<br>' +
+        'First it will process 1000 SAFE<br>' +
+        'then 100 SAFE<br>' +
+        'then 100 SAFE<br>' +
+        'then 100 SAFE',
+    '93_SAFE': '93 SAFE will keep waiting in deposit address.',
+    TO_CLEAR_THEM: 'To clear them you\'ll have to send 7 SAFE more to your SAFE Deposit Address.',
+    WHEN_IT_TOTALS: 'When it totals to 10/100/1000 SAFE, it will process to your SAFE Jumblr Address.',
     JADDR: 'Jumblr Addresses',
     BTC_DEPOSIT: 'BTC Deposit',
     SHOW_HIDE: 'Show/Hide',
     HIDDEN: 'Hidden for security reason.',
-    KMD_DEPOSIT: 'KMD Deposit',
+    SAFE_DEPOSIT: 'SAFE Deposit',
     JSTATUS: 'Jumblr Status',
     RESULT: 'Result',
     DEPOSITED: 'Deposited',
@@ -634,7 +634,7 @@ const LANG_EN = {
   },
   DASHBOARD: {
     NA: 'N/A',
-    KMD_UTXO_ISSUES: 'One or several of your UTXO are not generating rewards.<br>This could happen either if utxo size is less than 10 KMD, locktime field is not set or last time you claimed was over a month ago.<br>Please click on "Claim now" button to see details.',
+    SAFE_UTXO_ISSUES: 'One or several of your UTXO are not generating rewards.<br>This could happen either if utxo size is less than 10 SAFE, locktime field is not set or last time you claimed was over a month ago.<br>Please click on "Claim now" button to see details.',
     SHOW_ALL_ADDR: 'Show all addresses',
     RPC_CONN_FAILURE: 'Unable to establish RPC connection!<br>Retries count',
     REMOVE: 'Remove',
@@ -681,7 +681,7 @@ const LANG_EN = {
     WIN_SYNC_WORKAROUND_APPLY_FAILED: 'Unable to apply Windows sync workaround!',
     WIN_SYNC_WORKAROUND_REVERTED: 'Current sync state reached 80% level. Windows sync workaround is disabled. Changes will be applied next time you start the app.',
     WIN_SYNC_WORKAROUND_CTA_P1: 'Slow sync speed on Windows? Try this workaround.',
-    WIN_SYNC_WORKAROUND_CTA_P2: 'It will add maxconnections=1 in komodo.conf file and force close the app.',
+    WIN_SYNC_WORKAROUND_CTA_P2: 'It will add maxconnections=1 in safecoin.conf file and force close the app.',
     WIN_SYNC_WORKAROUND_CTA_P3: 'Please run the app again after that.',
     APPLY_WORKAROUND: 'Apply workaround',
     CURRENT_BLOCK_SM: 'current block',
@@ -704,12 +704,12 @@ const LANG_EN = {
     DATADIR_CLEARED: 'data folder is cleared',
     PORT_IS_TAKEN: 'Port @template@ is already taken!',
     ERROR_STARTING_DAEMON: 'Error starting @template@ daemon.',
-    KOMODO_DATADIR_INVALID: 'Komodo datadir path is invalid.<br>' +
+    SAFECOIN_DATADIR_INVALID: 'Safecoin datadir path is invalid.<br>' +
                             'It must be an absolute path to an existing folder that doesn\'t contain spaces and/or any special characters.',
-    KOMODO_DATADIR_NOT_DIR: 'Komodo datadir path is not a directory.<br>' +
+    SAFECOIN_DATADIR_NOT_DIR: 'Safecoin datadir path is not a directory.<br>' +
                             'It must be an absolute path to an existing folder that doesn\'t contain spaces and/or any special characters.',
     INVALID_ADDRESS: 'Invalid @template@ address',
-    RESTART_AGAMA_WITH_REINDEX_PARAM: 'Restart Agama and run Komodo with -reindex param',
+    RESTART_SAFEWALLET_WITH_REINDEX_PARAM: 'Restart Safewallet and run Safecoin with -reindex param',
     JUMBLR_DEPOSIT_ADDRESS_SET: 'Jumblr deposit address is set',
     JUMBLR_SECRET_ADDRESSES_IMPORTED: 'Jumblr secret addresses imported',
     JUMBLR_SECRET_ADDRESS_IMPORTED: 'Jumblr secret address imported',
@@ -739,7 +739,7 @@ const LANG_EN = {
     LOOKS_LIKE: 'Looks like',
     ALREADY_RUNNING: 'already running',
     STARTED_IN: 'started in',
-    KOMODO_ERR: 'Unable to start Komodod',
+    SAFECOIN_ERR: 'Unable to start Safecoind',
     SIGNED_TX_GENERATED: 'Signed transaction generated',
     SIGNED_TX_GENERATED_FAIL: 'Signed transaction Failed to generate',
     SENDING_TX: 'Sending Transaction to Network',
@@ -758,7 +758,7 @@ const LANG_EN = {
     ADDR_ISNT_REG: 'Address isn\'t Registered on Network. Please Register',
     INVALID_QUERY_ALT: 'Invalid query sent. Please try again.',
     VALIDATION_SUCCESS: 'Validation Success on Network',
-    KMD_NATIVE_CON_ERROR: 'Connection Error. Is external wallet running?',
+    SAFE_NATIVE_CON_ERROR: 'Connection Error. Is external wallet running?',
     LOGIN_SUCCESSFULL: 'Login Successfull',
     OPPS: 'Opps... Something went wrong!',
     INVALID_PASSPHRASE: 'Invalid seed. Make sure your seed is correct, or create new wallet.',
@@ -782,9 +782,9 @@ const LANG_EN = {
     PUBLIC_SM: 'public',
     CON_STATUS: 'Connection status',
   },
-  KMD_NATIVE: {
+  SAFE_NATIVE: {
     SELECT_ADDRESS: 'Select Transparent or Private Address',
-    SELECT_ADDRESS_ALT: 'Select Transparent or Private KMD Address',
+    SELECT_ADDRESS_ALT: 'Select Transparent or Private SAFE Address',
     PRIVATE: 'private',
     NEW_ADDR_GENERATED: 'New address generated successfully',
     QUEUED: 'Queued',
@@ -815,7 +815,7 @@ const LANG_EN = {
     CUSTOM_PIN_FNAME: 'Custom pin file name',
     CUSTOM_PIN_FNAME_INFO: 'Pin file name can only contain alphanumeric characters, dash "-" and underscore "_"',
     FIRST_TIME_SEED_USE: 'First time seed use',
-    PLEASE_WRITE_DOWN_YOUR_PUB: 'Please write down your public address, logout and login into Agama again to verify that your seed is correct.',
+    PLEASE_WRITE_DOWN_YOUR_PUB: 'Please write down your public address, logout and login into Safewallet again to verify that your seed is correct.',
     YOUR_ADDR_APPEARS_CORRECT: 'Your seed appears to be correct. As a final check up please double check that the public address you wrote down earlier is matching the one you see right now.',
     CONGRATS_ALL_SET: 'Congrats, you are all set!',
     YOUR_SEED_DOESNT_SEEM_CORRECT: 'Your seed doesn\'t seem to be correct. Please logout and repeat wallet creation procedure again.',
@@ -855,7 +855,7 @@ const LANG_EN = {
     NATIVE_MODE_DESC_P5: 'several hours to a day',
     NATIVE_MODE_DESC_P6: 'depending on your connection and hardware.',
     NATIVE_MODE_DESC_P7: 'Please',
-    NATIVE_MODE_DESC_P8: 'try to keep Agama running',
+    NATIVE_MODE_DESC_P8: 'try to keep Safewallet running',
     NATIVE_MODE_DESC_P9: 'until the whole process is finished.',
     OR_USE_A_SHORTCUT: 'or use a shortcut',
     PIN_LOGIN_INFO: 'You can login by entering a login seed or by selecting a pin',
@@ -892,7 +892,7 @@ const LANG_EN = {
   SUPPORT: {
     FOR_GUIDES: 'For guides & FAQ please navigate to',
     TO_SEND_FEEDBACK_P1: 'For Feedback please open a ticket',
-    TO_SEND_FEEDBACK_P2: 'or send an email to support@komodoplatform.com',
+    TO_SEND_FEEDBACK_P2: 'or send an email to support@safecoinplatform.com',
   },
   SETTINGS: {
     VALIDATE_PUBKEY: 'Validate pubkey',
@@ -970,7 +970,7 @@ const LANG_EN = {
     SPV_SERVER_LIST_DESC: 'Server list selection is only available for active coins that have more than 1 server to connect to.',
     SPV_SERVERS: 'SPV servers list',
     SPV_SINGLE_SERVER_NOTICE: 'There is only one electrum server available. SPV verification is coming from the same server providing all remote data.',
-    KMD_MAIN_SYNC_ONLY: 'KMD main sync only',
+    SAFE_MAIN_SYNC_ONLY: 'SAFE main sync only',
     RPC_FETCH_ONLY_DESC: 'Fetch block synchronization data only. Skip any other requests that can deteriorate sync speed.',
     RESET_TO_DEFAULT: 'Reset to default',
     PROGRESS: 'Progress',
@@ -1046,7 +1046,7 @@ const LANG_EN = {
     NO_VALID_UTXO_ERR: 'No valid UTXO is available. Your previous transaction is still in unconfirmed state. Please retry later.',
     PIN_NUMBER: 'Pin number',
     ENTER_YOUR_PIN: 'Enter your pin number to confirm transaction',
-    CLOCK_OUT_OF_SYNC: 'Your local clock is not set properly. This will prevent sending a KMD transaction.',
+    CLOCK_OUT_OF_SYNC: 'Your local clock is not set properly. This will prevent sending a SAFE transaction.',
     FEE_PER_BYTE: 'Fee per byte',
     PER_KB: 'per KB',
     ESTIMATED_TO_BE_INCLUDED_P3: 'block',
@@ -1071,7 +1071,7 @@ const LANG_EN = {
     FEE: 'Fee',
     TO: 'to',
     TOTAL_AMOUNT_DESC: 'Total (amount + transaction fee)',
-    KMD_INTEREST: 'KMD rewards',
+    SAFE_INTEREST: 'SAFE rewards',
     ADJUSTED_AMOUNT: 'Adjusted amount',
     MAX_AVAIL_AMOUNT_TO_SPEND: 'Max. available amount to spend - transaction fee',
     SATS: 'sats',
@@ -1158,7 +1158,7 @@ const LANG_EN = {
   TOOLS: {
     NO_UTXO: 'No UTXO found',
     THIS_REQUEST_MIGHT_TAKE_AROUND_1M: 'This action might take about 1 min to complete.',
-    ENTER_T_ADDRESS: 'Enter a valid KMD transparent address',
+    ENTER_T_ADDRESS: 'Enter a valid SAFE transparent address',
     SEARCHING: 'Searching',
     T_ADDRESS: 'Transparent address',
     ASSET: 'Asset',
@@ -1220,7 +1220,7 @@ const LANG_EN = {
     CHECK_VERSION: 'Check version',
     VERSION: 'Version',
     COINS: 'Coin(s)',
-    IGUANA_COMPAT: 'Iguana Core / Komodo ICO compatible',
+    IGUANA_COMPAT: 'Iguana Core / Safecoin ICO compatible',
     GET_WIF: 'Get WIF',
     SPLIT_SUCCESS: 'Split success',
     SPLIT_UTXO: 'Split UTXO',
@@ -1232,10 +1232,10 @@ const LANG_EN = {
     TYPE_A_STR: 'Type a string here',
     ENTER_A_WIF: 'Enter a WIF',
     GET_WIF: 'Get WIF',
-    GET_BALANCE_MULTI_KMD: 'This section doesn\'t account for KMD rewards. It shows multiple balances only.',
+    GET_BALANCE_MULTI_SAFE: 'This section doesn\'t account for SAFE rewards. It shows multiple balances only.',
     ADDRESSES: 'Addresses',
     ADDRESS_MULTI: 'Enter @template@ pub addresses each address on a new line.',
-    REMOTE_CALL_EXPLORER_ACKNOWLEDGEMENT: 'Privacy notification: this is a remote call to KMD explorer servers.',
+    REMOTE_CALL_EXPLORER_ACKNOWLEDGEMENT: 'Privacy notification: this is a remote call to SAFE explorer servers.',
     REMOTE_CALL_EXPLORER_ACKNOWLEDGEMENT_ATOMIC: 'Privacy notification: this is a remote call to Atomic Explorer server.',
     ALL_BALANCES_ARE_EMPTY: 'All balances are empty',
   },

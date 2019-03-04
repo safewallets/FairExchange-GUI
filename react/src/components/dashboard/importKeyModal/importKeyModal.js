@@ -12,8 +12,8 @@ import {
 } from '../../../actions/actionCreators';
 import translate from '../../../translate/translate';
 import ImportKeyModalRender from './importKeyModal.render';
-import { seedToWif } from 'agama-wallet-lib/src/keys';
-import btcNetworks from 'agama-wallet-lib/src/bitcoinjs-networks';
+import { seedToWif } from 'safewallet-wallet-lib/src/keys';
+import btcNetworks from 'safewallet-wallet-lib/src/bitcoinjs-networks';
 
 const SEED_TRIM_TIMEOUT = 5000;
 
@@ -152,10 +152,10 @@ class ImportKeyModal extends React.Component {
       setTimeout(() => {
         if (_rescanInProgress) {
           setTimeout(() => {
-            if (_coin === 'KMD') {
-              Store.dispatch(getDebugLog('komodo', 100));
+            if (_coin === 'SAFE') {
+              Store.dispatch(getDebugLog('safecoin', 100));
             } else {
-              Store.dispatch(getDebugLog('komodo', 100, _coin));
+              Store.dispatch(getDebugLog('safecoin', 100, _coin));
             }
           }, 2000);
 
@@ -231,7 +231,7 @@ class ImportKeyModal extends React.Component {
   generateKeysFromPassphrase() {
     if (this.state.wifkeysPassphrase &&
         this.state.wifkeysPassphrase.length) {
-      const _keys = seedToWif(this.state.wifkeysPassphrase, btcNetworks.kmd, true);
+      const _keys = seedToWif(this.state.wifkeysPassphrase, btcNetworks.safe, true);
 
       return {
         address: _keys.pub,

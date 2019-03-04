@@ -34,18 +34,18 @@ import ExchangesRender, {
 import translate from '../../../translate/translate';
 import {
   explorerList,
-  isKomodoCoin,
-} from 'agama-wallet-lib/src/coin-helpers';
+  isSafecoinCoin,
+} from 'safewallet-wallet-lib/src/coin-helpers';
 import {
   isPositiveNumber,
   fromSats,
   toSats,
   parseBitcoinURL,
-} from 'agama-wallet-lib/src/utils';
+} from 'safewallet-wallet-lib/src/utils';
 import { formatEther } from 'ethers/utils/units';
 import { getAddress } from 'ethers/utils/address';
-import coinFees from 'agama-wallet-lib/src/fees';
-import erc20ContractId from 'agama-wallet-lib/src/eth-erc20-contract-id';
+import coinFees from 'safewallet-wallet-lib/src/fees';
+import erc20ContractId from 'safewallet-wallet-lib/src/eth-erc20-contract-id';
 
 const { shell } = window.require('electron');
 const EXCHANGES_CACHE_UPDATE_INTERVAL = 60; // sec
@@ -56,7 +56,7 @@ const providers = [
   'changelly',
 ];
 
-// TODO: modify agama-wallet-lib to include explorer paths for pub addr and txid
+// TODO: modify safewallet-wallet-lib to include explorer paths for pub addr and txid
 //       coinswitch check for identical orders with no_deposit flag
 
 class Exchanges extends React.Component {
@@ -288,7 +288,7 @@ class Exchanges extends React.Component {
 
   loadTestData() {
     let _newState = JSON.parse(JSON.stringify(this.state.newExchangeOrderDetails));
-    _newState.coinSrc = 'KMD|spv';
+    _newState.coinSrc = 'SAFE|spv';
     _newState.coinDest = 'GAME|spv';
     _newState.amount = 30;
 

@@ -36,11 +36,11 @@ class Navbar extends React.Component {
     this._toggleBlurSensitiveData = this._toggleBlurSensitiveData.bind(this);
     this.spvLock = this.spvLock.bind(this);
     this.spvLogout = this.spvLogout.bind(this);
-    this.openKomodoPlatformLink = this.openKomodoPlatformLink.bind(this);
+    this.openSafecoinPlatformLink = this.openSafecoinPlatformLink.bind(this);
   }
 
-  openKomodoPlatformLink() {
-    return shell.openExternal('https://komodoplatform.com/komodo-wallets');
+  openSafecoinPlatformLink() {
+    return shell.openExternal('https://safecoinplatform.com/safecoin-wallets');
   }
 
   _toggleBlurSensitiveData() {

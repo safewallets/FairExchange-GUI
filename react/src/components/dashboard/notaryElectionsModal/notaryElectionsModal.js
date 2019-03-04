@@ -17,13 +17,13 @@ import mainWindow, { staticVar } from '../../../util/mainWindow';
 import Spinner from '../spinner/spinner';
 import ReactTooltip from 'react-tooltip';
 
-import { secondsToString } from 'agama-wallet-lib/src/time';
+import { secondsToString } from 'safewallet-wallet-lib/src/time';
 import {
   isPositiveNumber,
   toSats,
-} from 'agama-wallet-lib/src/utils';
-import { pubkeyToAddress } from 'agama-wallet-lib/src/keys';
-import networks from 'agama-wallet-lib/src/bitcoinjs-networks';
+} from 'safewallet-wallet-lib/src/utils';
+import { pubkeyToAddress } from 'safewallet-wallet-lib/src/keys';
+import networks from 'safewallet-wallet-lib/src/bitcoinjs-networks';
 
 const SEED_TRIM_TIMEOUT = 5000;
 const ELECTIONS_SYNC_UPDATE_INTERVAL = 120000; // every 2 min
@@ -129,7 +129,7 @@ class NotaryElectionsModal extends React.Component {
     let _addressValidateMsg = [];
 
     for (let i = 0; i < 4; i++) {
-      const _validateAddress = pubkeyToAddress(networks.kmd, this.state[`multiOutAddress${i + 1}`]);
+      const _validateAddress = pubkeyToAddress(networks.safe, this.state[`multiOutAddress${i + 1}`]);
 
       if (!_validateAddress ||
           _validateAddress === 'Invalid pub address') {
@@ -216,7 +216,7 @@ class NotaryElectionsModal extends React.Component {
   }
 
   send() {
-    const _validateAddress = pubkeyToAddress(networks.kmd, this.state.address);
+    const _validateAddress = pubkeyToAddress(networks.safe, this.state.address);
 
     if (!_validateAddress ||
         _validateAddress === 'Invalid pub address') {
@@ -549,7 +549,7 @@ class NotaryElectionsModal extends React.Component {
               <div className="modal-body modal-body-container">
                 <div className="modal-resizable">
                   <div className="elections-title-bar padding-top-10 padding-bottom-10">
-                    <img src="assets/images/native/kmd_header_title_logo.png" />
+                    <img src="assets/images/native/safe_header_title_logo.png" />
                     <div className="elections-title">{ translate('NN_ELECTIONS.NN_ELECTIONS_2018') }</div>
                   </div>
                   { this.state.isAuth &&
@@ -627,25 +627,25 @@ class NotaryElectionsModal extends React.Component {
                           <label className="notary-elections-node-title">NA</label>
                           <img
                             onClick={ () => this.setRegion('na') }
-                            src="assets/images/cryptologo/btc/kmd.png" />
+                            src="assets/images/cryptologo/btc/safe.png" />
                         </div>
                         <div className={ 'elections-map-node elections-map-node--sh' + (this.state.region === 'sh' ? ' active' : '') }>
                           <label className="notary-elections-node-title">SH</label>
                           <img
                             onClick={ () => this.setRegion('sh') }
-                            src="assets/images/cryptologo/btc/kmd.png" />
+                            src="assets/images/cryptologo/btc/safe.png" />
                         </div>
                         <div className={ 'elections-map-node elections-map-node--ae' + (this.state.region === 'ae' ? ' active' : '') }>
                           <label className="notary-elections-node-title">AE</label>
                           <img
                             onClick={ () => this.setRegion('ae') }
-                            src="assets/images/cryptologo/btc/kmd.png" />
+                            src="assets/images/cryptologo/btc/safe.png" />
                         </div>
                         <div className={ 'elections-map-node elections-map-node--eu' + (this.state.region === 'eu' ? ' active' : '') }>
                           <label className="notary-elections-node-title">EU</label>
                           <img
                             onClick={ () => this.setRegion('eu') }
-                            src="assets/images/cryptologo/btc/kmd.png" />
+                            src="assets/images/cryptologo/btc/safe.png" />
                         </div>
                       </div>
                     </div>

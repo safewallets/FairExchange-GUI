@@ -10,7 +10,7 @@ import SVGFaviconColor from './svg/faviconColor';
 import SVGCopy from './svg/copy';
 import SVGChevronRight from './svg/chevronRight';
 import SVGCheck from './svg/check';
-import { passphraseGenerator } from 'agama-wallet-lib/src/crypto/passphrasegenerator';
+import { passphraseGenerator } from 'safewallet-wallet-lib/src/crypto/passphrasegenerator';
 
 class DexLogin extends React.Component {
   constructor() {

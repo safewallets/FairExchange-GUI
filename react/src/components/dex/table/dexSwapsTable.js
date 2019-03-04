@@ -6,11 +6,11 @@ import translate from '../../../translate/translate';
 import {
   sortByDate,
   formatValue,
-} from 'agama-wallet-lib/src/utils';
+} from 'safewallet-wallet-lib/src/utils';
 import Config from '../../../config';
 import { triggerToaster } from '../../../actions/actionCreators';
 import Store from '../../../store';
-import { secondsToString } from 'agama-wallet-lib/src/time';
+import { secondsToString } from 'safewallet-wallet-lib/src/time';
 
 const BOTTOM_BAR_DISPLAY_THRESHOLD = 15;
 

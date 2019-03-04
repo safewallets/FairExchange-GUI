@@ -103,7 +103,7 @@ class Tools extends React.Component {
                   type="button"
                   className="btn btn-default"
                   onClick={ () => this.setActiveSection('balance-multi') }>
-                  KMD { translate('TOOLS.BALANCE') } (multi address) *
+                  SAFE { translate('TOOLS.BALANCE') } (multi address) *
                 </button>
                 <button
                   type="button"

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import translate from '../../../translate/translate';
 import {
   dashboardChangeActiveCoin,
-  getKMDAddressesNative,
+  getSAFEAddressesNative,
   startInterval,
   stopInterval,
   triggerToaster,
@@ -21,9 +21,9 @@ import {
   JumblrRenderSecretAddressList,
 } from './jumblr.render';
 
-import passphraseGenerator from 'agama-wallet-lib/src/crypto/passphrasegenerator';
-import { seedToWif } from 'agama-wallet-lib/src/keys';
-import btcNetworks from 'agama-wallet-lib/src/bitcoinjs-networks';
+import passphraseGenerator from 'safewallet-wallet-lib/src/crypto/passphrasegenerator';
+import { seedToWif } from 'safewallet-wallet-lib/src/keys';
+import btcNetworks from 'safewallet-wallet-lib/src/bitcoinjs-networks';
 
 // TODO: promises, move to backend crypto libs
 
@@ -120,7 +120,7 @@ class Jumblr extends React.Component {
   }
 
   generateKeys(passphrase) {
-    const _keys = seedToWif(passphrase, btcNetworks.kmd, true);
+    const _keys = seedToWif(passphrase, btcNetworks.safe, true);
 
     return {
       address: _keys.pub,
